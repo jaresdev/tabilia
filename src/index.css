@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --color-shadow-button-hover: rgba(31, 137, 238, 0.3);
+  --color-shadow-button-hover: rgba(31, 31, 31, 0.1);
+  --color-neutral: #a1a1a1;
 }
 
 button[type="submit"] {

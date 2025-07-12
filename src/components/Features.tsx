@@ -6,7 +6,7 @@ function Features() {
     <section className="w-full flex justify-center bg-slate-50 border-t-gray-200 p-10">
       <article className="max-w-7xl flex flex-col gap-16 items-center justify-center">
         <h3 className="font-bold text-2xl">Know your options</h3>
-        <div className="flex gap-40">
+        <div className="flex gap-30">
           <Feature
             icon={
               <Search className="size-14" />
