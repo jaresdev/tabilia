@@ -1,8 +1,24 @@
 @import "tailwindcss";
 
+@tailwind utilities;
+
 @theme {
   --color-shadow-button-hover: rgba(31, 31, 31, 0.1);
   --color-neutral: #a1a1a1;
+}
+
+@layer components {
+  .react-datepicker-wrapper {
+    @apply w-full
+  }
+
+  .react-datepicker__tab-loop {
+    @apply absolute
+  }
+
+  .custom-datepicker {
+    @apply w-full border border-neutral rounded-2xl p-4 focus:outline-none focus:ring-1 focus:ring-[#1F89EE];
+  }
 }
 
 button[type="submit"] {

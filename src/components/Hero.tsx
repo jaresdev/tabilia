@@ -39,11 +39,12 @@ function Hero() {
             isClearable
             placeholderText="Select travel dates"
             className="custom-datepicker"
+            dayClassName={() => 'flex items-center justify-center h-8 w-8 rounded-full hover:bg-gray-200'}
           />
           <button 
             type="submit" 
-            className="w-1/3 p-4 mt-4 rounded-xl text-white font-bold cursor-pointer 
-              transition-all duration-300 ease-in-out hover:-traslate-y-0.5 hover:shadow-xl
+            className="w-1/3 p-4 mt-4 rounded-xl text-white font-bold cursor-pointer
+              transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:shadow-xl
               hover:shadow-shadow-button-hover"
           >
             {isGenerating ? 'Generating...' : 'Generate'}
