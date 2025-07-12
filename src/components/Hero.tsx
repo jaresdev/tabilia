@@ -1,23 +1,35 @@
+import { useState } from "react"
+
 function Hero() {
+  const [isGenerating, setIsGenerating] = useState(false)
+  
+  const handleClick = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+
+    setIsGenerating(!isGenerating)
+  }
+
   return(
     <section className="w-full flex-1 max-w-7xl flex flex-col gap-16 items-center justify-center">
       <article className="flex flex-col items-center gap-3">
         <h1 className="font-bold text-6xl">Your smart travel checklist</h1>
         <h2 className="text-3xl">
-          Enter your destination and dates — we’ll generate your custom packing and task list.
+          Enter your destination and dates — we’ll generate your custom packing and task list
         </h2>
       </article>
       <article className="w-8/12">
-        <form className="flex flex-col items-center gap-8 w-full">
+        <form className="flex flex-col items-center gap-8 w-full" onSubmit={handleClick}>
           <input 
             type="text"
             placeholder="Destination"
-            className="w-full border border-[#D9D9D9] rounded-2xl p-4 placeholder-[#D9D9D9]"
+            className="w-full border border-[#D9D9D9] rounded-2xl p-4 placeholder-[#D9D9D9]
+            focus:outline-none focus:ring-1 focus:ring-[#1F89EE]"
           />
           <input 
             type="date"
             placeholder="Destination"
-            className="w-full border border-[#D9D9D9] rounded-2xl p-4 placeholder-[#D9D9D9] text-[#D9D9D9]"
+            className="w-full border border-[#D9D9D9] rounded-2xl p-4 placeholder-[#D9D9D9] 
+            text-[#D9D9D9] focus:outline-none focus:ring-1 focus:ring-[#1F89EE]"
           />
           <button 
             type="submit" 
@@ -25,7 +37,7 @@ function Hero() {
               transition-all duration-300 ease-in-out hover:-traslate-0.5 hover:shadow-xl
               hover:shadow-shadow-button-hover"
           >
-            Generate
+            {isGenerating ? 'Generating...' : 'Generate'}
           </button>
         </form>
       </article>
