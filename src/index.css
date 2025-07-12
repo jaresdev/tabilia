@@ -1,1 +1,9 @@
-@import "tailwindcss"
+@import "tailwindcss";
+
+@theme {
+  --color-shadow-button-hover: rgba(31, 137, 238, 0.3);
+}
+
+button[type="submit"] {
+  background: linear-gradient(to bottom right, #16B256 30%, #1F89EE 83%);
+}
